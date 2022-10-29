@@ -59,10 +59,12 @@ int main()
 
     cout << "k,size,brute,recursive\n";
 
-    int countM = 0, countB = 0;
+    int countM, countB;
 
     for(int i = 1; i <= 25; i++)
     {
+        countM = 0, countB = 0;
+
         M1 = createMatrix(i);
         M2 = createMatrix(i);
         
