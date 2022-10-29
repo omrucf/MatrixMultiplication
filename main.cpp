@@ -16,7 +16,7 @@ using namespace std;
 
 typedef vector<vector<int> > mtrx;
 
-mtrx MatrixMult(mtrx, mtrx, int &);
+mtrx MatrixMult(mtrx, mtrx, long long &);
 
 mtrx MatrixAdd(mtrx, mtrx);
 
@@ -26,7 +26,7 @@ void printMatrix(const mtrx);
 
 mtrx createMatrix(int);
 
-mtrx brute(mtrx, mtrx, int &);
+mtrx brute(mtrx, mtrx, long long &);
 
 int main()
 {
@@ -49,7 +49,7 @@ int main()
         {-13, -14, -15, -16}
     };
 
-    int c = 0;
+    long long c = 0;
 
     mtrx res = MatrixMult(M1, M2, c);
 
@@ -59,7 +59,7 @@ int main()
 
     cout << "k,size,brute,recursive\n";
 
-    int countM, countB;
+    long long countM, countB;
 
     for(int i = 1; i <= 25; i++)
     {
@@ -80,7 +80,7 @@ int main()
     return 0;
 }
 
-mtrx MatrixMult(mtrx M1, mtrx M2, int &count)
+mtrx MatrixMult(mtrx M1, mtrx M2, long long &count)
 {
     int size = M1.size();
 
@@ -200,7 +200,7 @@ mtrx createMatrix(int size)
     return M;
 }
 
-mtrx brute(mtrx M1, mtrx M2, int &count)
+mtrx brute(mtrx M1, mtrx M2, long long &count)
 {
     int size = M1.size();
 
